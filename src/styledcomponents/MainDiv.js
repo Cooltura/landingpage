@@ -2,8 +2,8 @@ import styled from "styled-components"
 import breakpoint from 'styled-components-breakpoint'
 
 const MainDiv=styled.div`
-    background:${({background})=>background || "#ffffff"};
-    
+    background:${props => props.theme.colors[props.background ] || "#ffffff" };
+  
     align-items:${({alignitems})=>alignitems || "center"};
     text-align:${({textalgin}) => textalgin || 'left'};  
     color:${props=>props.fontcolor || props.theme.colors.gray};

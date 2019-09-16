@@ -85,6 +85,10 @@ const DIV=styled.div`
             }
         }  
     }
+   
+    div.usage{
+        width:100%;
+    }
     
     img.usagebutton{
         position:relative;

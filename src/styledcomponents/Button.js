@@ -7,11 +7,14 @@ const StyledButton=styled.button`
     color:${props =>props.fontcolor || '#ffffff'};
     padding:${props =>props.padding || '0.8em 1.6em'} ;
     font-family:${({theme}) =>theme.fonts.header || 'Arial'};  
-    background-color:${props =>props.buttoncolor || props.theme.colors.blue};
+    background-color:${props => props.theme.colors[props.buttoncolor] || props.theme.colors.blue};
    
-    
     &:hover{
         opacity:0.8;
+    }
+    &:link{
+        text-decoration: none;
+        color:currentcolor;
     }
 `;
 

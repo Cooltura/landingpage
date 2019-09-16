@@ -8,7 +8,7 @@ const BanerDiv=styled.div`
     display:flex; 
     justify-content:space-between;
     align-items:center;
-    background:${({background})=>background || "#ffffff"};
+    background:${props => props.theme.colors[props.background ] || "#ffffff" };
     font-size:1.4em;
     color:${({theme})=>theme.colors.black ||'black'};
     font-family:${({theme})=> theme.fonts.header || 'Arial'};
