@@ -7,6 +7,7 @@ const MainDiv=styled.div`
     align-items:${({alignitems})=>alignitems || "center"};
     text-align:${({textalgin}) => textalgin || 'left'};  
     color:${props=>props.fontcolor || props.theme.colors.gray};
+    height:${props=>props.height || 'auto'};
 
     font-size:9px;
     padding:0.5em 1em 0.5em 1em;

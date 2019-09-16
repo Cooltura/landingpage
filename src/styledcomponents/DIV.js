@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint'
 
 const DIV=styled.div`
    
@@ -19,12 +20,22 @@ const DIV=styled.div`
     }
 
     h3{
+        font-size:1em;
+       
+        ${breakpoint('sm')`
         font-size:1.4em;
+        `}
+        
         color:${({theme})=>theme.colors.gray ||'gray'};
         font-family:${({theme})=> theme.fonts.text || 'Arial'}; 
     }
     h1{
+        font-size:1.4em;
+       
+        ${breakpoint('sm')`
         font-size:1.95em;
+        `}
+        
         color:${({theme})=>theme.colors.black||'black'};
         font-family:${({theme})=> theme.fonts.header || 'Arial'};  
     }
@@ -37,13 +48,7 @@ const DIV=styled.div`
         color:${props => props.theme.colors.black || 'black'};
         font-family:${props => props.theme.fonts.header || 'Arial'};
     }  
-    div.service{
-        display:flex;
-        align-items:center;
-        div{
-            display:inline-block;
-        }
-    } 
+  
     div.footer{
         margin-right:2em; 
         div.imgfooter{
@@ -53,6 +58,7 @@ const DIV=styled.div`
         }
     }
     div.reference{
+        font-size:1.2em;
         display:flex;
         align-items:center;       
         div.textcompany{
@@ -84,6 +90,15 @@ const DIV=styled.div`
         position:relative;
            top:0.5em;
            right:0.2em;
+    }
+
+    &.services{
+        div.header{
+            padding-left:0.5em;
+        }
+        div.text{
+            padding-left:0.2em;
+        }
     }
 
     &.menu{
