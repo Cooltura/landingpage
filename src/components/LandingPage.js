@@ -4,13 +4,12 @@ import {Link} from "gatsby"
 import Slider from './Slider'
 import Adventage from "./Adventage"
 
-import StyledLink from "../styledcomponents/Link"
+
 import StyledButton from "../styledcomponents/Button"
 import MainDiv from "../styledcomponents/MainDiv"
 import BanerDiv from "../styledcomponents/BanerDiv"
 import DIV from "../styledcomponents/DIV"
 import H2 from "../styledcomponents/H2"
-import Hr from "../styledcomponents/Hr"
 import Img from "../styledcomponents/Img"
 
 import {texts} from "../utils/texts"
@@ -27,47 +26,17 @@ import icon5 from '../images/icon-5.png'
 import femax from '../images/femax.png'
 import savi from '../images/savi.png'
 
+import Usage2_1 from '../images/imgUsage2.jpg'
+import Usage2_2 from '../images/imgUsage2.2.jpg'
 
 import imgUsage from '../images/imgUsage.png'
 import more from '../images/icon-more.png'
-import IconFacebookWhite from '../images/icon-facebook-white.png'
-import IconLinkedinWhite from '../images/icon-linkedin-white.png'
-import IconGooglePlay from '../images/icon-googleplay.png'
-import IconFacebook from '../images/icon-facebook.png'
-import IconLinkedin from '../images/icon-linkedin.png'
-import IconKuptam from '../images/logo-kuptam.png'
-
 
 
 export default class LandingPage extends React.Component  {
     render(){
         return (
-            <>  
-                <MainDiv background={({theme})=>theme.colors.verylightblue} padding='0.5em 4em 0.5em 4em' >
-                <DIV justifycontent='space-between' >
-                    <DIV className='menu'>
-                        <div><Img src={IconFacebook} width='2' alt='iconfb'></Img></div>
-                        <div className='childimg'><Img src={IconLinkedin} width='2' alt='iconlinked'></Img></div>
-                    </DIV>
-                    <DIV fontcolor={({theme})=>theme.colors.black} fontfamily={({theme})=>theme.fonts.text} textsize='20px' className='menu'>          
-                        <div><a className='link' href="tel:48694487332">{texts.menu.email}</a></div>  
-                        <div className='child' ><a className='link' href="mailto:info@innokrea.pl" >{texts.menu.tel}</a>   </div>     
-                    </DIV>
-                </DIV>
-            </MainDiv>
-            <MainDiv padding='0.5em 4em 0.5em 4em' className='withshadow'>
-                <DIV justifycontent='space-between'>
-                    <div>
-                    <Img src={IconKuptam} width='10' alt='iconkuptam'></Img>
-                    </div>
-                    <DIV fontcolor={({theme})=>theme.colors.black} fontfamily={({theme})=>theme.fonts.header} textsize='20px' className='menu'>
-                        <div><StyledLink to='/404'>{texts.menu.menutext1}</StyledLink></div>
-                        <div className='child'><StyledLink to='/404'>{texts.menu.menutext2}</StyledLink></div>
-                    <div className='child'><StyledButton buttoncolor={({theme})=>theme.colors.blue} fontcolor='#ffffff' as={Link} to='/404'>{texts.menu.button}</StyledButton></div> 
-                    </DIV>
-                </DIV>
-                
-            </MainDiv>
+            <>              
                 {/* ----------------HEADER PART-------------------- */}
             <MainDiv padding='0em 2em 1em 4em'>
                 <DIV justifycontent='space-between' textalgin='left'>
@@ -76,7 +45,7 @@ export default class LandingPage extends React.Component  {
                         <div><h3>{texts.header.text}</h3></div>    
                         <div className="button">
                         <center> 
-                            <StyledButton buttoncolor={({theme})=>theme.colors.red} as={Link} to='/404'>{texts.header.button}</StyledButton>
+                            <StyledButton buttoncolor='red' as={Link} to='/404'>{texts.header.button}</StyledButton>
                         </center> 
                         </div>
                     </div>
@@ -123,7 +92,7 @@ export default class LandingPage extends React.Component  {
             </MainDiv>
 
                     {/* ----------------ACTION PART-------------------- */}
-            <MainDiv background={({theme})=>theme.colors.verylightblue} textalgin="center">
+            <MainDiv background='verylightblue' textalgin="center">
                 <DIV>
                     <H2>{texts.action.header}</H2>
                 </DIV>
@@ -146,7 +115,7 @@ export default class LandingPage extends React.Component  {
                     </DIV>      
                 </DIV>
                 <DIV padding="3em 0em 3em 0em">
-                <center> <StyledButton buttoncolor={({theme})=>theme.colors.blue} as={Link} to='/404'>{texts.action.button}</StyledButton>  </center>          
+                <center> <StyledButton buttoncolor='blue' as={Link} to='/404'>{texts.action.button}</StyledButton>  </center>          
                 </DIV> 
             </MainDiv>    
 
@@ -173,47 +142,55 @@ export default class LandingPage extends React.Component  {
             </MainDiv>
 
                     {/* ----------------USAGE PART-------------------- */}
-            <MainDiv>
+            <MainDiv >
                 <DIV>
                     <H2>{texts.usage.header}</H2>
                 </DIV>
-                <DIV justifycontent="space-between" padding="0em 0em 3em 0em">
-                    <div>
+                <DIV justifycontent="space-between" padding="0em 0em 0em 0em" alignitems='top' >
+                    <div className='usage'>
                         <div><Img src={imgUsage} width='20' alt="imgUsage1"></Img></div>
-                        <div className='header'><h4>{texts.usage.header}</h4></div>
-                        <div><p>{texts.usage.text}</p></div>
-                        <div><StyledButton buttoncolor={({theme})=>theme.colors.blue}  as={Link} to='/404'><Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}</StyledButton></div>
+                        <div className='header'><h4>{texts.usage.header1}</h4></div>
+                        <div><p>{texts.usage.text1}</p></div>
                     </div>
-                    <div>
+                    <div className='usage'>
+                        <div><Img src={Usage2_1} width='20' alt="imgUsage1"></Img></div>
+                        <div className='header'><h4>{texts.usage.header2}</h4></div>
+                        <div><p>{texts.usage.text2}</p></div>
+                     </div>
+                    <div className='usage'>
                         <div><Img src={imgUsage} width='20' alt="imgUsage1"></Img></div>
-                        <div className='header'><h4>{texts.usage.header}</h4></div>
-                        <div><p>{texts.usage.text}</p></div>
-                        <div><StyledButton buttoncolor={({theme})=>theme.colors.blue}   as={Link} to='/404'><Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}</StyledButton></div>
-                    </div>
-                    <div>
-                        <div><Img src={imgUsage} width='20' alt="imgUsage1"></Img></div>
-                        <div className='header'><h4>{texts.usage.header}</h4></div>
-                        <div><p>{texts.usage.text}</p></div>
-                        <div><StyledButton buttoncolor={({theme})=>theme.colors.blue}   as={Link} to='/404'><Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}</StyledButton></div>
-                    </div>
+                        <div className='header'><h4>{texts.usage.header3}</h4></div>
+                        <div><p>{texts.usage.text3}</p></div>
+                      </div>
                 </DIV>
+                <DIV justifycontent="space-around" padding="0em 0em 3em 0em" alignitems='center' >
+                    <div><StyledButton buttoncolor='blue' as={Link} to='/404' ><Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}</StyledButton></div>
+                    <div>
+                        <StyledButton buttoncolor='blue' as={Link} to='/Usage/' state={{img1:Usage2_1,img2:Usage2_2, header:texts.usage.headers[2],text1:texts.usage.text2,text2:texts.usage.text2}}>
+                            <Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}
+                        </StyledButton>
+                    </div>
+                    <div><StyledButton buttoncolor='blue'  as={Link} to='/404'><Img className='usagebutton' src={more} width='2' alt='more'></Img>{texts.usage.button1}</StyledButton></div>
+                       
+                </DIV>
+
                 <DIV>
-                    <StyledButton buttoncolor={({theme})=>theme.colors.red}  as={Link} to='/404'>{texts.usage.button2}</StyledButton>       
+                    <StyledButton buttoncolor='red'  as={Link} to='/MoreUsages' text='cos'>{texts.usage.button2}</StyledButton>       
                 </DIV>
             </MainDiv>
 
                     {/* ----------------BANNER PART--------------------  */}
-                <BanerDiv background={({theme})=>theme.colors.lightblue}>
+                <BanerDiv background='lightblue'>
                     <div>
                         <div><h3>{texts.banner.header}</h3></div>
                         <div> {texts.banner.text}</div>
-                        <div className='button'><StyledButton buttoncolor={({theme})=>theme.colors.red}  as={Link} to='/404'>{texts.banner.button}</StyledButton>  </div>
+                        <div className='button'><StyledButton buttoncolor='red'  as={Link} to='/404'>{texts.banner.button}</StyledButton>  </div>
                     </div>
                     <div className='baner'><Img src={ImgBaner} width='28' alt='baner'></Img></div>
                 </BanerDiv>
         
                     {/* ----------------SERVICES PART-------------------- */}
-            <MainDiv>
+            <MainDiv padding='0em 4.4em 1.1em 4.4em'>
                 <DIV textalgin="center">
                     <div>
                     <H2>{texts.service.header}</H2>
@@ -238,43 +215,7 @@ export default class LandingPage extends React.Component  {
                 </DIV>
             </MainDiv>
 
-                {/* ----------------FOOTER PART-------------------- */}
-            <MainDiv background={({theme})=>theme.colors.darkblue} padding='0em 4.4em 1.1em 4.4em'>
-                <DIV justifycontent='space-between' textalgin='left' fontcolor='#ffffff' >
-                    <div className='footer'>
-                        <div><h4>{texts.footer.header[0]}</h4></div>
-                        <div>{texts.footer.text[0][0]}</div>
-                        <div>{texts.footer.text[0][1]}</div>
-                        <div>{texts.footer.text[0][2]}</div>
-                        <div>{texts.footer.text[0][3]}</div>
-                        <div>{texts.footer.text[0][4]}</div>
-                    </div>
-                    <div className='footer'>
-                        <div><h4>{texts.footer.header[1]}</h4></div>
-                        <div>{texts.footer.text[1][0]}</div>
-                        <div>{texts.footer.text[1][1]}</div>
-                        <br></br>
-                        <div>{texts.footer.text[1][2]} </div>
-                        <div>{texts.footer.text[1][3]}</div>
-                    </div>
-                    <div className='footer'>
-                            <br></br>
-                            <div className='imgfooter'>
-                                <div><Img src={IconLinkedinWhite} width='3' alt='iconLinked'></Img></div>
-                                <div><Img src={IconFacebookWhite} width='3' alt='iconFb'></Img></div>
-                            </div>
-                        
-                            <div>  <Img src={IconGooglePlay} width='8' alt='icongoogle'></Img></div>
-                        
-                        
-                    </div>
-
-                </DIV>
-            </MainDiv>
-            <MainDiv background={({theme})=>theme.colors.darkblue} fontcolor='#ffffff' padding='0' textalgin='center'>
-                <Hr></Hr>
-                {texts.footer.bottomtext}
-            </MainDiv>
+           
             </>
         );
     }

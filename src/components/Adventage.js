@@ -21,6 +21,7 @@ const Div=styled.div`
     &.translation{
         transition-duration:0.8s;
     }
+    
     &#arrow1{
         left:0%;
       margin-top:2%;
@@ -73,6 +74,8 @@ export default class Adventage extends React.Component  {
         this.setState({
             array:new_array
         }) 
+
+
     }
 
 
@@ -164,7 +167,6 @@ export default class Adventage extends React.Component  {
 
             let elements=this.state.array;
             let first=0;
-            let last=elements.length-1;
             let second=1;
             let last_visible_element=5;
 
@@ -203,7 +205,7 @@ export default class Adventage extends React.Component  {
     render(){
         return (
     <>  
-        <MainDiv background={({theme})=>theme.colors.lightblue} textalgin="center" padding='1.1em 4.4em 1.1em 4.4em' height='13em' className='withshadow'> 
+        <MainDiv background='lightblue' textalgin="center" padding='1.1em 4.4em 1.1em 4.4em' height='13em' className='withshadow'> 
             <H2>{texts.adventage.header}</H2>  
             <DIV alignitems='center'>  
               <div>
