@@ -4,6 +4,7 @@ export const texts={
         email:'e-mail: info@innokrea.pl',
         menutext1:'ZASTOSOWANIA',
         menutext2:'KONTAKT',
+        menutext3:'ZALOGUJ SIĘ',
         button:'ZAREJESTRUJ SIĘ',
     },
     header:{
@@ -38,8 +39,18 @@ export const texts={
 
     },
     usage:{
-        header:'Wynajem lokalu lub powierzchni',
-        text:'Załóżmy, że dysponujesz lokalem usługowym, działką lub wagonem (!) i chciałbyś otrzymać jak najlepszą cenę za wynajem tej przestrzeni... Jak zrobić to szybko i efektywnie ? Zaproś swoich oferentów w ramach systemu aukcyjnego KUPTAM.PL do licytacji! ',
+        header:'PRZYKŁADOWE ZASTOSOWANIA',
+        header1:'Wynajem lokalu lub powierzchni',
+        text1:'Załóżmy, że dysponujesz lokalem usługowym, działką lub wagonem (!) i chciałbyś otrzymać jak najlepszą cenę za wynajem tej przestrzeni... Jak zrobić to szybko i efektywnie ? Zaproś swoich oferentów w ramach systemu aukcyjnego KUPTAM.PL do licytacji! Nie musisz organizować oddzielnego spotkania z wszystkimi oferentami.  ',
+        header2:'Wyprzedaż sprzętu na rzecz pracowników ',
+        text2:'Jednym z naszych Klientów jest międzynarodowa korporacja z branży finansowej, która posiada około 700 oddziałów na całym świecie. W tak dużej instytucji wyzwanie stanowiła wyprzedaż sprzętu biurowego – cała procedura musiała przebiegać w sposób jawny i zgodny z zasadami compliance.',
+        header3:'Wyprzedaż likwidacyjna i upadłościowa',
+        text3:' System KUPTAM może być wykorzystywany do realizacji aukcji w procesach upadłościowych lub komorniczych. Jeżeli posiadasz towar lub produkty, które wymagają przeprowadzenia aukcji oraz zewidencjonowania procesu przeprowadzania takich transakcji to nasze narzędzie jest idealnym rozwiązaniem. ',
+        header4:'Dodatkowy kanał sprzedaży outletowej ',
+        text4:'FEMAX to hurtownia oraz salony z wyposażeniem łazienek, techniką grzewczą i sanitarną – posiada 13 placówek sprzedaży i zatrudnia ponad 140 pracowników.W tej branży częstym wyzwaniem są produkty z końcówek serii i wycofane z oferty producenta, towar który zalega w magazynach – w pełni sprawny i wartościowy, jednak generujący w firmie dodatkowe koszty magazynowania czy utylizacji.',
+        header5:'Wyprzedaż samochodów ',
+        text5:'',
+        headers:['dd','','Wyprzedaż sprzętu na rzecz pracowników '],
         button1:'WIĘCEJ',
         button2:'SPRAWDŹ WIĘCEJ WDROŻEŃ',
     },
