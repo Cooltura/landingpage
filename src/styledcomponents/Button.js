@@ -1,21 +1,21 @@
 import styled from "styled-components"
-const StyledButton=styled.button`
-    
-    line-height:1.5;
-    border:0px;
-    font-size:1em;
-    color:${props =>props.fontcolor || '#ffffff'};
-    padding:${props =>props.padding || '0.8em 1.6em'} ;
-    font-family:${({theme}) =>theme.fonts.header || 'Arial'};  
-    background-color:${props => props.theme.colors[props.buttoncolor] || props.theme.colors.blue};
-   
-    &:hover{
-        opacity:0.8;
-    }
-    &:link{
-        text-decoration: none;
-        color:currentcolor;
-    }
-`;
+const StyledButton = styled.button`
+  line-height: 1.5;
+  border: 0px;
+  font-size: 1em;
+  color: ${props => props.fontcolor || "#ffffff"};
+  padding: ${props => props.padding || "0.8em 1.6em"};
+  font-family: ${({ theme }) => theme.fonts.header || "Arial"};
+  background-color: ${props =>
+    props.theme.colors[props.buttoncolor] || props.theme.colors.blue};
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:link {
+    text-decoration: none;
+    color: currentcolor;
+  }
+`
 
 export default StyledButton

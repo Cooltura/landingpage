@@ -1,36 +1,44 @@
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint'
+import breakpoint from "styled-components-breakpoint"
 
-const MainDiv=styled.div`
-    background:${props => props.theme.colors[props.background ] || "#ffffff" };
-  
-    align-items:${({alignitems})=>alignitems || "center"};
-    text-align:${({textalgin}) => textalgin || 'left'};  
-    color:${props=>props.fontcolor || props.theme.colors.gray};
-    height:${props=>props.height || 'auto'};
+const MainDiv = styled.div`
+    background:${props => props.theme.colors[props.background] || "#ffffff"};
+    align-items:${({ alignitems }) => alignitems || "center"};
+    text-align:${({ textalign }) => textalign || "left"};  
+    color:${props => props.fontcolor || props.theme.colors.gray};
+    height:${props => props.height || "auto"};
+    
+    font-size:14px;
+    padding:1em 0.5em 1em 0.5em;
+ 
 
-    font-size:9px;
-    padding:0.5em 1em 0.5em 1em;
-    ${breakpoint('sm')`
-    font-size:12px;
-    padding:${({padding})=>padding || "0em 2em 0em 2em"};
+    ${breakpoint("sm")`
+    font-size:14px;
+   
+    padding:${({ padding }) => padding || "0em 2em 0em 2em"};
     `}
-    ${breakpoint('md')`
+    ${breakpoint("md")`
     font-size:15px;
-    padding:${({padding})=>padding || "0em 3em 0em 3em"};
+    padding:${({ padding }) => padding || "0em 3em 0em 3em"};
     `}
-    ${breakpoint('lg')`
+    ${breakpoint("lg")`
     font-size:18px;
-    padding:${({padding})=>padding || "0em 4.4em 0em 4.4em"};
+    padding:${({ padding }) => padding || "0em 4.4em 0em 4.4em"};
     `}
     
     &.withshadow{
-        -moz-box-shadow: 0em 0.1em 0.3em 0em ${({theme}) =>theme.colors.gray || 'gray'};
-        -webkit-box-shadow: 0em 0.1em 0.3em 0em ${({theme}) =>theme.colors.gray || 'gray'};
-        box-shadow: 0em 0.1em 0.3em 0em ${({theme}) =>theme.colors.gray || 'gray'};
+        box-shadow: 0em 0.1em 0.3em 0em ${({ theme }) =>
+          theme.colors.gray || "gray"};
         margin-bottom: 0.3em;
     }
-`;
+    a:link{
+        text-decoration: none;
+        color:currentcolor;
+    }
+    a.link:hover{
+        border-bottom:1px solid currentcolor;
+    }
 
+`
 
-export default MainDiv;
+export default MainDiv
